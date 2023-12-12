@@ -1,0 +1,58 @@
+-- Выбираем базу данных
+USE mydatabase;
+
+-- Создаем таблицу Customer
+CREATE TABLE Customer (
+    Customer_ID INT PRIMARY KEY AUTO_INCREMENT,
+    Name VARCHAR(255),
+    Email VARCHAR(255),
+    PhoneNumber VARCHAR(15),
+    modifyDate TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+-- Создаем таблицу Service
+CREATE TABLE Service (
+    Service_ID INT PRIMARY KEY AUTO_INCREMENT,
+    Service_name VARCHAR(255),
+    Price DECIMAL(10, 2),
+    modifyDate TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+-- Создаем таблицу Role
+CREATE TABLE Role (
+    Role_ID INT PRIMARY KEY AUTO_INCREMENT,
+    Name VARCHAR(255)
+);
+
+-- Создаем таблицу User
+CREATE TABLE User (
+    User_ID INT PRIMARY KEY AUTO_INCREMENT,
+    Login VARCHAR(255),
+    Password VARCHAR(255),
+    Role_ID INT,
+    modifyDate TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    FOREIGN KEY (Role_ID) REFERENCES Role(Role_ID)
+);
+
+-- Создаем таблицу Order
+CREATE TABLE `Order` (
+    Order_ID INT PRIMARY KEY AUTO_INCREMENT,
+    Service_ID INT,
+    Master_ID INT,
+    Customer_ID INT,
+    TimeSlotStart DATETIME,
+    TimeSlotEnd DATETIME,
+    modifyDate TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    FOREIGN KEY (Customer_ID) REFERENCES Customer(Customer_ID),
+    FOREIGN KEY (Service_ID) REFERENCES Service(Service_ID),
+    FOREIGN KEY (Master_ID) REFERENCES User(User_ID)
+);
+
+
+
+-- Вставляем запись с ролью "admin" в таблицу Role (если она еще не существует)
+INSERT INTO Role (Name) VALUES ('admin') ON DUPLICATE KEY UPDATE Role_ID = Role_ID;
+
+-- Вставляем запись с пользователем "admin" в таблицу User
+INSERT INTO User (Login, Password, Role_ID) VALUES ('admin', 'admin', (SELECT Role_ID FROM Role WHERE Name = 'admin'));
+

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TatooTut</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        body, h1, h2, h3, p, input, select, button {
+            font-family: 'Roboto', sans-serif;
+        }
+
+
+        header, nav, main, footer {
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            background-color: #333;
+            color: #fff;
+        }
+
+        nav {
+            text-align: center;
+            background-color: #555;
+            color: #fff;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            margin: 0 10px;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        form input, form select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        form button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .gallery {
+        text-align: center;
+        }
+
+        .gallery img {
+            max-width: 300px; 
+            max-height: 300px; 
+            width: 100%;
+            height: auto;
+        }
+
+        .gallery_master {
+        text-align: center;
+        }
+
+        .gallery_master img {
+            max-width: 300px;
+            max-height: 300px;
+            width: 100%;
+            height: auto;
+            border: 1px solid rgba(255, 255, 255, 0);
+            transition: transform 0.3s, border 0.3s;
+        }
+
+        .gallery_master img:hover {
+            transform: scale(1.05);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+
+
+
+
+        footer {
+            text-align: center;
+            background-color: #333;
+            color: #fff;
+        }
+
+
+        header {
+            text-align: center;
+            background-color: #333;
+            color: #fff;
+        }
+
+        header h1 {
+            margin: 0; /* Убираем внешние отступы у h1 */
+        }
+
+        main h2 {
+            text-align: center;
+        }
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Тату салон TatooTut</h1>
+    </header>
+    <nav>
+        <a href="/">Главная</a>
+        <a href="#">Услуги</a>
+        <a href="/contact">Контакты</a>
+        <a href="/login">Вход для персонала</a>
+
+    </nav>
+    <main>
+        <h2>Записаться в наш тату салон</h2>
+        <form method="post">
+            <input name="name" id="name" type="text" placeholder="Ваше имя" required><br>
+            <input name="email" id="email" type="email" placeholder="Ваш email" required><br>
+            <input name="phone" id="phone" type="tel" placeholder="Ваш номер телефона" required><br>
+            <select name="master" id="master" required>
+                <option value="" disabled selected>Выберите мастера</option>
+                <option value="Мастер 1">Мастер 1</option>
+                <option value="Мастер 2">Мастер 2</option>
+                <option value="Мастер 3">Мастер 3</option>
+                <option value="Не определился">Не определился</option>
+            </select><br>
+            <button type="submit">Записаться</button>
+        </form>
+    </main>
+
+    <section class="gallery_master">
+        <h2>Наши мастера</h2>
+        <a href="/master1"><img src="https://musicglue-images-prod.global.ssl.fastly.net/warehousefalkirk/profile/images?u=aHR0cHM6Ly9tdXNpY2dsdWUtdXNlci1hcHAtcC01LXAuczMuYW1hem9uYXdzLmNvbS9vcmlnaW5hbHMvOGUyNTgwZTAtMGNjMy0wMTM1LWMxNjctNWExNjVhNTZkM2U0&height=1200&mode=fit&width=1200&v=2" alt="Мастер 1"></a>
+        <a href="/master2"><img src="https://avatars.mds.yandex.net/get-ydo/4393845/2a0000017869a37a0fc691bb7be3665171ff/diploma" alt="Мастер 2"></a>
+        <a href="/master3"><img src="https://cs14.pikabu.ru/post_img/big/2023/07/01/8/1688214566138343387.jpg" alt="Мастер 3"></a>
+    </section>
+
+    <section class="gallery">
+        <h2>Примеры наших работ</h2>
+        <img src="https://o-tendencii.com/uploads/posts/2022-05/1653985990_48-o-tendencii-com-p-neobichnie-tatu-so-smislom-foto-49.jpg" alt="Татуировка 1">
+        <img src="https://i.pinimg.com/originals/8a/cf/52/8acf528448482be3d7e65fe6f617f5d5.jpg" alt="Татуировка 2">
+        <img src="http://klublady.ru/uploads/posts/2022-07/1658225767_53-klublady-ru-p-tatuirovki-na-pleche-eskizi-foto-54.jpg" alt="Татуировка 3">
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Тату салон "TatooTut". Все права защищены.</p>
+    </footer>
+</body>
+</html>

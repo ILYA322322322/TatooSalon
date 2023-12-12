@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Администратор</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        header, nav, main, footer {
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            background-color: #333;
+            color: #fff;
+        }
+
+        nav {
+            text-align: center;
+            background-color: #555;
+            color: #fff;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            margin: 0 10px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+            margin: 0 10px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #333;
+            color: #fff;
+        }
+
+        header h1, main h2 {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Панель администратора</h1>
+    </header>
+    <nav>
+        <a href="/admin">Главная</a>
+        <a href="/clients">Клиенты</a>
+        <a href="/appointment">Записи</a>
+        <a href="/application">Заявки</a>
+    </nav>
+    <main>
+        <div class="container">
+            <h2>Данные клиентов</h2>
+            <br>
+            <a href="/clients">Клиенты</a>
+            <!--  -->
+        </div>
+        <div class="container">
+            <h2>Просмотр записей</h2>
+            <br>
+            <a href="/appointment">Записи</a>
+            <!--  -->
+        </div>
+        <div class="container">
+            <h2>Просмотр заявок</h2>
+            <br>
+            <a href="/application">Заявки</a>
+            <!--  -->
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2023 Панель администратора. Все права защищены.</p>
+    </footer>
+</body>
+</html>

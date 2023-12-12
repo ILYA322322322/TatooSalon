@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Заявки</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        header, nav, main, footer {
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            background-color: #333;
+            color: #fff;
+        }
+
+        nav {
+            text-align: center;
+            background-color: #555;
+            color: #fff;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            margin: 0 10px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #333;
+            color: #fff;
+        }
+
+        header h1, main h2 {
+            margin: 0;
+        }
+
+        .gray-button {
+             background-color: #6c757d;
+             border: none;
+             color: white;
+             padding: 15px 32px;
+             text-align: center;
+             text-decoration: none;
+             display: inline-block;
+             font-size: 16px;
+             margin: 4px 2px;
+             cursor: pointer;
+             border-radius: 4px;
+             transition: background-color 0.3s;
+            }
+
+        .gray-button:hover {
+             background-color: #5a6268;
+            }
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Панель администратора</h1>
+    </header>
+    <nav>
+        <a href="/admin">Главная</a>
+        <a href="/clients">Клиенты</a>
+        <a href="/appointment">Записи</a>
+        <a href="/application">Заявки</a>
+    </nav>
+    <main>
+        <h2>Заявки</h2>
+        <div class="container">
+            <h2>Заявка 1</h2>
+            <h3>Телефон клиента</h3><a id="clientPhoneNumber1">+79638521212</a>
+            <h3>Имя</h3><a id="clientName1">Мария</a>
+            <h3>Почта</h3><a id="clientEmail1">masha@mail.ru</a>
+            <h3>Мастер</h3><a id="masterNameApplication1">Мастер 1</a><br>
+            <button class="gray-button">Редактировать</button>
+            <!--  -->
+        </div>
+        <div class="container">
+            <h2>Заявка 2</h2>
+            <h3>Телефон клиента</h3><a id="clientPhoneNumber2">+79638521211</a>
+            <h3>Имя</h3><a id="clientName2">Пётр</a>
+            <h3>Почта</h3><a id="clientEmail2">petr@mail.ru</a>
+            <h3>Мастер</h3><a id="masterNameAppointment2">Мастер 2</a>
+            <h3>Время</h3><a id="TimeAppointment2">17:00</a>
+            <h3>Дата</h3><a id="DateAppointment2">21/11/2023</a><br>
+            <button class="gray-button">Редактировать</button>
+            <!--  -->
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2023 Панель администратора. Все права защищены.</p>
+    </footer>
+</body>
+</html>
